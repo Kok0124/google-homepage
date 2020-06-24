@@ -3,7 +3,27 @@ html {
     min-height: 100%;
 }
 
-#navbar {
-    display: grid;
-    
+a {
+    text-decoration: none;
+    color:#5f6368;
 }
+a:hover {
+    text-decoration: underline;
+}
+
+nav ul {
+    font-size: 13px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: 100px 1fr repeat(4,80px);
+    justify-content: center;
+    justify-items: center;
+    align-items: end;
+}
+
+#store {
+    justify-self: start;
+ }
