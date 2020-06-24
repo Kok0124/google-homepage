@@ -1,3 +1,10 @@
+/*
+To do:
+nav bar méretek, menü ikon szín, sign in gomb
+main
+*/
+
+
 html {
     height: 100%;
     min-height: 100%;
@@ -16,14 +23,85 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-
     display: grid;
     grid-template-columns: 100px 1fr repeat(4,80px);
     justify-content: center;
     justify-items: center;
-    align-items: end;
+    align-items: center;
+}
+
+#menu {
+    padding-top: 3.5px;
 }
 
 #store {
     justify-self: start;
+ }
+
+ main {
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 233px 52px 88px;
+    grid-template-areas: 
+    ". logo ."
+    ". searchbar ."
+    ". buttons .";
+    justify-content: center;
+    justify-items: center;
+ }
+ 
+ #logo{
+     grid-area: logo;
+     align-self: end;
+ }
+ #searchbar{
+    grid-area: searchbar;
+    width: 80%;
+    height: 44px;
+    border-radius: 24px;
+    border: 1px solid #dfe1e5;
+    background: #fff;
+    justify-self: center;
+}
+ #buttons{
+     grid-area: buttons;
+ }
+
+ footer {
+     font-size: 14px;
+     color: #5f6368;
+     background-color: #f2f2f2;
+     position: absolute;
+     bottom: 0;
+     left: 0px;
+     right: 0px;
+     display: grid;
+     grid-template-columns: repeat(3,auto) 1fr repeat(3,auto);
+     grid-template-rows: 40px;
+     grid-template-areas: "advertising business HIW . privacy terms settings";
+     column-gap: 24px;
+     align-content: center;
+     align-items: center;
+ }
+ 
+ #advertising{
+     grid-area: advertising;
+     padding-left: 24px;
+ }
+ #business{
+     grid-area: business;
+ }
+ #HIW{
+     grid-area: HIW;
+ }
+ #privacy{
+     grid-area: privacy;
+ }
+ #terms{
+     grid-area: terms;
+ }
+ #settings{
+     grid-area: settings;
+     padding-right: 24px;
  }
